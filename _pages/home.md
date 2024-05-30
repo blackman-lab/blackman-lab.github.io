@@ -32,7 +32,7 @@ permalink: /
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/01.jpg" alt="Mimulus in the Greenhouse" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/Buck_Day_2023.jpg" alt="Bucket Day 2023" />
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/buckday.jpg" alt="Bucket Day 2023" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/04.jpg" alt="Mimulus at the Beack" />
