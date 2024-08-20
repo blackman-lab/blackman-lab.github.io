@@ -47,11 +47,25 @@
     <div class="container-fluid">
       <div class="row">
         <div id="gridid" class="col-sm-12">
-  <div class="row">
-  <div style="width:50%;float:left;padding:2.5%">
+  <style>
+    div.half {
+        width: 50%;
+        float: left;
+        padding: 2.5%;
+    }
+
+    @media (max-width: 860px) {
+	div.half {
+		width: 100%;
+	}
+  }
+</style>
+
+<div class="row">
+  <div class="half">
     <p><img src="https://blackman-lab.github.io/images/staff/ben_full.jpg" width="100%" /></p>
   </div>
-  <div style="width:50%;float:left;padding:2.5%">
+  <div class="half">
     <h2 id="benjamin-blackman">Benjamin Blackman</h2>
     <p>Associate Professor of Plant and Microbial Biology</p>
     <p>Curator of Plant Adaptation in the University and Jepson Herbaria</p>

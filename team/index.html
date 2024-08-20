@@ -100,40 +100,46 @@
 
 <h2 id="undergraduate-students">Undergraduate Students</h2>
 
-<div class="row">
+<div id="undergrads" class="row">
+  <div id="studentalums" class="col-sm-4 clearfix" style="display:none">
 
-  <div class="col-sm-6 clearfix">
-    <h4>Benjamin Sims</h4>
-    <p><i> <!-- <br>email: <benjamis20@berkeley.edu></i> --></i></p>
-    <ul style="overflow: hidden">
+    <h4 style="margin: 26px 0px 12px;">Benjamin Sims</h4>
 
-  
+    <h4 style="margin: 26px 0px 12px;">Chloe Sowder</h4>
 
-  
+    <h4 style="margin: 26px 0px 12px;">Jenny Shi</h4>
 
-  
+    <h4 style="margin: 26px 0px 12px;">Patrick Jacobson</h4>
 
-  
+    <h4 style="margin: 26px 0px 12px;">Hannah Lin</h4>
 
-  </ul>
+    <h4 style="margin: 26px 0px 12px;">Daleep Pannu</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Evan Passalacqua</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Samantha Garcia</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Radha Srinivasan</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Allison Yee</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Chris Zhan</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Kendall Hayes</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Willow Humphrey</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Charlotte Kortleven</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Marlee Meek</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Aryaa Chanchani</h4>
+
+    <h4 style="margin: 26px 0px 12px;">Cathy Kenderski</h4>
+
   </div>
-
-  <div class="col-sm-6 clearfix">
-    <h4>Stew Dent</h4>
-    <p><i> <!-- <br>email: <></i> --></i></p>
-    <ul style="overflow: hidden">
-
-  
-
-  
-
-  
-
-  
-
-  </ul>
-  </div>
-
+  <div id="column1" class="col-sm-4 clearfix" style="box-sizing:border-box"></div>
+  <div id="column2" class="col-sm-4 clearfix" style="box-sizing:border-box"></div>
 </div>
 
 <h2 id="alumni">Alumni</h2>
@@ -258,6 +264,50 @@
 </div>
 
 <h2><a href="https://blackman-lab.github.io/studentalums">Former Students</a></h2>
+
+<script>
+    // sort list of students by last name
+    const div = document.getElementById('studentalums');
+
+    // Convert the HTMLCollection of <p> elements into an array
+    const paragraphs = Array.from(div.getElementsByTagName('h4'));
+
+    // Sort the array by the last name
+    paragraphs.sort((a, b) => {
+        // Split the text content of each <p> element by spaces to get the last names
+        const aLastName = a.textContent.split(' ').slice(1)[0];
+        const bLastName = b.textContent.split(' ').slice(1)[0];
+
+        // Compare the last names
+        return aLastName.localeCompare(bLastName);
+    });
+
+    // Clear the existing content of the div
+    div.innerHTML = '';
+
+    // Calculate the middle point
+    const midpoint = Math.ceil(paragraphs.length / 2);
+
+    const column1 = document.getElementById('column1');
+    const column2 = document.getElementById('column2');
+
+    // Distribute the items into two columns
+    paragraphs.forEach((item, index) => {
+        if (index < midpoint) {
+            column1.appendChild(item);
+        } else {
+            column2.appendChild(item);
+        }
+    });
+
+    // style the columns
+    column1.style.float = 'left';
+    column2.style.float = 'left';
+    column1.style.width = '50%';
+    column2.style.width = '50%';
+
+</script>
+
 
 </div>
 

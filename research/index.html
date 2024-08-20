@@ -47,20 +47,34 @@
     <div class="container-fluid">
       <div class="row">
         <div id="textid" class="col-sm-12">
-  <div class="row" style="text-align:center">
-  <div style="width:50%;float:left;padding:0 2.5%">
+  <style>
+    div.half {
+        width: 50%;
+        float: left;
+        padding: 0 2.5%;
+    }
+
+    @media (max-width: 775px) {
+	div.half {
+		width: 100%;
+	}
+  }
+</style>
+
+<div class="row" style="text-align:center">
+  <div class="half">
     <h2><a href="https://blackman-lab.github.io/research/sunflower-domestication"><span style="height:75px;display:inline-block">Sunflower Domestication</span><img src="https://blackman-lab.github.io/images/research/domestication.jpg" width="100%" /></a></h2>
 
   </div>
-  <div style="width:50%;float:left;padding:0 2.5%">
+  <div class="half">
     <h2><a href="https://blackman-lab.github.io/research/developmental-timing"><span style="height:75px;display:inline-block">Adaptation of Developmental Timing</span><img src="https://blackman-lab.github.io/images/research/dev-timing.jpg" width="100%" /></a></h2>
   </div>
 </div>
 <div class="row" style="text-align:center">
-  <div style="width:50%;float:left;padding:0 2.5%">
+  <div class="half">
     <h2><a href="https://blackman-lab.github.io/research/gene-family-adaptation">Gene Family Adaptation<img src="https://blackman-lab.github.io/images/research/gene-family.JPG" width="100%" /></a></h2>
   </div>
-  <div style="width:50%;float:left;padding:0 2.5%">
+  <div class="half">
     <h2><a href="https://blackman-lab.github.io/research/solar-tracking">Solar Tracking<img src="https://blackman-lab.github.io/images/research/solar-tracking.JPG" width="100%" /></a></h2>
   </div>
 </div>
